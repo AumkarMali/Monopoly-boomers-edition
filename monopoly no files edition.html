@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .button {
+            background-color: rgb(140, 31, 202);
+            /* purple */
+            border: none;
+            color: rgb(119, 218, 62);
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button4 {
+            border-radius: 15px;
+        }
+
+        .button5 {
+            border-radius: 40%;
+        }
+
+        .on {
+            background-color: #4CAF50;
+            border: none;
+            color: rgba(185, 133, 133, 0.377);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+
+        .button3 {
+            background-color: white;
+            color: blue;
+            border: 3px solid #f44336;
+        }
+
+        .button1 {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 3px solid #4CAF50;
+        }
+
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 3px solid #008CBA;
+        }
+
+        .button55 {
+            background-color: white;
+            color: black;
+            border: 3px solid #555555;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 16px;
+            padding: 16px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .doo {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #ffee06;
+            border: none;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 17px;
+            padding: 2px 12px;
+            width: 300px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .doo span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .doo span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .doo:hover span {
+            padding-right: 25px;
+        }
+
+        .doo:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .lan {
+            background-color: #f4511e;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .lan:hover {
+            opacity: 2
+        }
+
+        .an {
+            background-color: #ff00ff;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .an:hover {
+            opacity: 2
+        }
+
+        .n {
+            background-color: #047409;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .n:hover {
+            opacity: 2
+        }
+
+        .a {
+            background-color: #077474;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .a:hover {
+            opacity: 2
+        }
+
+        .rip {
+            position: relative;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 20px;
+            color: #FFFFFF;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .rip:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .rip:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+
+        .press {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #e3d16b;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .press:hover {
+            background-color: #c15725
+        }
+
+        .press:active {
+            background-color: #e3d16b;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .butt {
+            background-color: rgb(238, 160, 15);
+            /* light orange */
+            border: none;
+            color: rgb(53, 98, 104);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+        }
+
+
+        .butt2:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        .bu {
+            background-color: #6F1F05;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.6s;
+            cursor: pointer;
+        }
+
+        .bu1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #6F1F05;
+        }
+
+        .bu1:hover {
+            background-color: #6F1F05;
+            color: white;
+        }
+
+        .ton {
+            background-color: #C73C29;
+            /* red */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .ton1 {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .pp {
+            background-color: #add8e6;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        .pp1 {
+            border-radius: 60%;
+        }
+
+        .d {
+            background-color: #7a0d16;
+            border: none;
+            color: rgb(83, 91, 201);
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .d:hover {
+            opacity: 5
+        }
+
+        body {
+            background-image: url("tri.jpg");
+            background-color: #cccccc;
+
+        }
+
+        .play {
+            background-color: #d2b48c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .play2 {
+            background-color: #008CBA;
+        }
+    </style>
+    <script>
+
+        var cash = 50;
+        var cash2 = 50;
+        var cash3 = 50;
+        var cash4 = 50;
+        var acre = 5;
+        var acre2 = 5;
+        var acre3 = 5;
+        var acre4 = 5;
+
+        function dice() {
+
+            var arr = [1, 2, 3, 4, 5, 6]
+            var roll = arr[Math.floor(Math.random() * arr.length)]
+
+            if (roll > 0) {
+                alert(roll + "is your dice roll")
+            }
+        }
+
+
+
+        function field2() {
+            confirm2 = prompt("do you want to purchase a field")
+            if (confirm2 == "yes" && cash2 >= 300) {
+                cash2 = cash2 - 300;
+                acre2 = acre2 + 3;
+                alert("player 2 has" + acre2 + "land")
+                alert("player 2 has" + cash2 + "money")
+            }
+
+            else if (cash2 <= 300) {
+                alert("player 2 does not have enough money to purchase a field")
+            }
+        }
+
+        function field() {
+            var confirm = prompt("Do you want to buy the field?")
+
+            if (confirm == "yes" && cash >= 300) {
+                cash = cash - 300;
+                acre = acre + 3;
+                alert("player 1 has" + acre + "land")
+                alert("player 1 has" + cash + "money")
+            }
+
+            else if (cash <= 300) {
+                alert("player 1 does not have enough money to purchase a field")
+            }
+
+        }
+
+
+        function field3() {
+            var confirm3 = prompt("Do you want to buy the field?")
+
+            if (confirm3 == "yes" && cash3 >= 300) {
+                cash3 = cash3 - 300;
+                acre3 = acre3 + 3;
+                alert("player 3 has" + acre3 + "land")
+                alert("player 3 has" + cash3 + "money")
+            }
+
+            else if (cash3 <= 300) {
+                alert("player 3 does not have enough money to purchase a field")
+            }
+
+        }
+
+        function field4() {
+            var confirm4 = prompt("Do you want to buy the field?")
+
+            if (confirm4 == "yes" && cash4 >= 300) {
+                cash4 = cash4 - 300;
+                acre4 = acre4 + 3;
+                alert("player 4 has" + acre4 + "land")
+                alert("player 4 has" + cash4 + "money")
+            }
+
+            else if (cash4 <= 300) {
+                alert("player 4 does not have enough money to purchase a field")
+            }
+
+        }
+
+
+        function prairie() {
+            var par = prompt("Do you want to buy the prairie?")
+
+            if (par == "yes" && cash >= 400) {
+                cash = cash - 400;
+                acre = acre + 4;
+                alert("player 1 has" + acre + "land")
+                alert("player 1 has" + cash + "money")
+            }
+
+            else if (cash <= 300) {
+                alert("player 1 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie2() {
+            var par2 = prompt("Do you want to buy the prairie?")
+
+            if (par2 == "yes" && cash2 >= 400) {
+                cash2 = cash2 - 400;
+                acre2 = acre2 + 4;
+                alert("player 2 has" + acre2 + "land")
+                alert("player 2 has" + cash2 + "money")
+            }
+
+            else if (cash2 <= 300) {
+                alert("player 2 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie3() {
+            var par3 = prompt("Do you want to buy the prairie?")
+
+            if (par3 == "yes" && cash3 >= 400) {
+                cash3 = cash3 - 400;
+                acre3 = acre3 + 4;
+                alert("player 3 has" + acre3 + "land")
+                alert("player 3 has" + cash3 + "money")
+            }
+
+            else if (cash3 <= 300) {
+                alert("player 3 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie4() {
+            var par4 = prompt("Do you want to buy the prairie?")
+
+            if (par4 == "yes" && cash4 >= 400) {
+                cash4 = cash4 - 400;
+                acre4 = acre4 + 4;
+                alert("player 4 has" + acre4 + "land")
+                alert("player 4 has" + cash4 + "money")
+            }
+
+            else if (cash4 <= 300) {
+                alert("player 4 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function lake() {
+            var car = prompt("Do you want to buy the lake?")
+
+            if (car == "yes" && cash >= 600) {
+                cash = cash - 600;
+                acre = acre + 6;
+                alert("player 1 has" + acre + "land")
+                alert("player 1 has" + cash + "money")
+            }
+
+            else if (cash <= 600) {
+                alert("player 1 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake2() {
+            var car2 = prompt("Do you want to buy the lake?")
+
+            if (car2 == "yes" && cash2 >= 600) {
+                cash2 = cash2 - 600;
+                acre2 = acre2 + 6;
+                alert("player 2 has" + acre2 + "land")
+                alert("player 2 has" + cash2 + "money")
+            }
+
+            else if (cash2 <= 600) {
+                alert("player 2 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake3() {
+            var car3 = prompt("Do you want to buy the lake?")
+
+            if (car3 == "yes" && cash3 >= 600) {
+                cash3 = cash3 - 600;
+                acre3 = acre3 + 6;
+                alert("player 3 has" + acre3 + "land")
+                alert("player 3 has" + cash3 + "money")
+            }
+
+            else if (cash3 <= 600) {
+                alert("player 3 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake4() {
+            var car4 = prompt("Do you want to buy the lake?")
+
+            if (car4 == "yes" && cash4 >= 600) {
+                cash4 = cash4 - 600;
+                acre4 = acre4 + 6;
+                alert("player 4 has" + acre4 + "land")
+                alert("player 4 has" + cash4 + "money")
+            }
+
+            else if (cash4 <= 600) {
+                alert("player 4 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function park() {
+            var park = prompt("Do you want to buy the park?")
+
+            if (park == "yes" && cash >= 200) {
+                cash = cash - 200;
+                acre = acre + 2;
+                alert("player 1 has" + acre + "land")
+                alert("player 1 has" + cash + "money")
+            }
+
+            else if (cash <= 200) {
+                alert("player 1 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function park2() {
+            var park2 = prompt("Do you want to buy the park?")
+
+            if (park2 == "yes" && cash2 >= 200) {
+                cash2 = cash2 - 200;
+                acre2 = acre2 + 2;
+                alert("player 2 has" + acre2 + "land")
+                alert("player 2 has" + cash2 + "money")
+            }
+
+            else if (cash2 <= 200) {
+                alert("player 2 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function park3() {
+            var park3 = prompt("Do you want to buy the park?")
+
+            if (park3 == "yes" && cash3 >= 200) {
+                cash3 = cash3 - 200;
+                acre3 = acre3 + 2;
+                alert("player 3 has" + acre3 + "land")
+                alert("player 3 has" + cash3 + "money")
+            }
+
+            else if (cash3 <= 200) {
+                alert("player 3 does not have enough money to purchase a park")
+            }
+
+        }
+
+
+        function park4() {
+            var park4 = prompt("Do you want to buy the park?")
+
+            if (park4 == "yes" && cash4 >= 200) {
+                cash4 = cash4 - 200;
+                acre4 = acre4 + 2;
+                alert("player 4 has" + acre4 + "land")
+                alert("player 4 has" + cash4 + "money")
+            }
+
+            else if (cash4 <= 200) {
+                alert("player 4 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function chest() {
+
+            var che = prompt("did you land on the chest block")
+            var player = prompt("what player are you")
+
+            if (che == "yes" && player == "1") {
+                cash = cash + 250;
+                alert("player 1 has recieved 250 cash")
+            }
+            else if (che == "yes" && player == "2") {
+                cash2 = cash2 + 250;
+                alert("player 2 has recieved 250 cash")
+            }
+            else if (che == "yes" && player == "3") {
+                cash3 = cash3 + 250;
+                alert("player 3 has recieved 250 cash")
+            }
+            else if (che == "yes" && player == "4") {
+                cash4 = cash4 + 250;
+                alert("player 4 has recieved 250 cash")
+            }
+
+        }
+
+        function tax() {
+            var van = prompt("what player are you")
+
+            if (van == "1") {
+                cash = cash - cash * 0.2;
+                alert("player 1's net worth :" + cash)
+            }
+            else if (van == "2") {
+                cash2 = cash2 - cash2 * 0.2;
+                alert("player 2's net worth :" + cash2)
+            }
+            else if (van == "3") {
+                cash3 = cash3 - cash3 * 0.2;
+                alert("player 3's net worth :" + cash3)
+            }
+            else if (van == "4") {
+                cash4 = cash4 - cash4 * 0.2;
+                alert("player 4's net worth :" + cash4)
+            }
+        }
+
+        function railroad() {
+            var sk = prompt("do you want to invest in the transcontinental railroad")
+            var joji = prompt("what player are you")
+
+            if (sk == "yes" && joji == "1") {
+                acre = acre + acre * 0.4;
+                alert("player 1 has this much land :" + acre)
+            }
+            else if (joji == "2") {
+                acre2 = acre2 + acre2 * 0.4;
+                alert("player 2 has this much land :" + acre2)
+            }
+            else if (joji == "3") {
+                acre3 = acre3 + acre3 * 0.4;
+                alert("player 3 has this much land :" + acre3)
+            }
+            else if (joji == "4") {
+                acre4 = acre4 + acre4 * 0.4;
+                alert("player 4 has this much land :" + acre4)
+            }
+        }
+
+        function setValue() {
+
+            document.getElementById('bbb').value = cash;
+        }
+
+        function meet() {
+
+            document.getElementById('aaa').value = cash2;
+        }
+
+        function yeet() {
+
+            document.getElementById('ccc').value = cash3;
+        }
+
+        function met() {
+
+            document.getElementById('ddd').value = cash4;
+        }
+
+        function lan() {
+
+            document.getElementById('ggg').value = acre;
+        }
+
+        function lan22() {
+
+            document.getElementById('sss').value = acre2;
+        }
+
+        function nan() {
+
+            document.getElementById('zzz').value = acre3;
+        }
+
+        function nic() {
+
+            document.getElementById('hhh').value = acre4;
+        }
+
+        function payday() {
+
+
+            var rep = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay = [60, 75, 80];
+            var get = pay[Math.floor(Math.random() * pay.length)];
+
+            var pay1 = [45, 90];
+            var get1 = pay1[Math.floor(Math.random() * pay1.length)];
+
+            var pay2 = [40, 65, 20];
+            var get2 = pay2[Math.floor(Math.random() * pay2.length)];
+
+            var pay3 = [10, 35, 50, 80, 150];
+            var get3 = pay3[Math.floor(Math.random() * pay3.length)];
+
+
+
+
+
+            if (rep == "farmer") {
+                cash = cash + get;
+                alert("you recieved" + get + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+
+            }
+            else if (rep == "miner") {
+                cash = cash + get1;
+                alert("you recieved" + get1 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+            }
+            else if (rep == "factory worker") {
+                cash = cash + get2;
+                alert("you recieved" + get2 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+            }
+            else if (rep == "entrepreneur") {
+                cash = cash + get3;
+                alert("you recieved" + get3 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+            }
+
+        }
+
+
+        function payday2() {
+
+
+            var rep2 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay4 = [60, 75, 80];
+            var get4 = pay4[Math.floor(Math.random() * pay4.length)];
+
+            var pay5 = [45, 90];
+            var get5 = pay5[Math.floor(Math.random() * pay5.length)];
+
+            var pay6 = [40, 65, 20];
+            var get6 = pay6[Math.floor(Math.random() * pay6.length)];
+
+            var pay7 = [10, 35, 50, 80, 150];
+            var get7 = pay7[Math.floor(Math.random() * pay7.length)];
+
+
+
+
+
+            if (rep2 == "farmer") {
+                cash2 = cash2 + get4;
+                alert("you recieved" + get4 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+
+            }
+            else if (rep2 == "miner") {
+                cash2 = cash2 + get5;
+                alert("you recieved" + get5 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+            }
+            else if (rep2 == "factory worker") {
+                cash2 = cash2 + get6;
+                alert("you recieved" + get6 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+            }
+            else if (rep2 == "entrepreneur") {
+                cash2 = cash2 + get7;
+                alert("you recieved" + get7 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+            }
+
+        }
+
+
+        function payday3() {
+
+
+            var rep3 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay8 = [60, 75, 80];
+            var get8 = pay8[Math.floor(Math.random() * pay8.length)];
+
+            var pay9 = [45, 90];
+            var get9 = pay9[Math.floor(Math.random() * pay9.length)];
+
+            var pay10 = [40, 65, 20];
+            var get10 = pay10[Math.floor(Math.random() * pay10.length)];
+
+            var pay11 = [10, 35, 50, 80, 150];
+            var get11 = pay11[Math.floor(Math.random() * pay11.length)];
+
+
+
+
+
+            if (rep3 == "farmer") {
+                cash3 = cash3 + get8;
+                alert("you recieved" + get8 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+
+            }
+            else if (rep3 == "miner") {
+                cash3 = cash3 + get9;
+                alert("you recieved" + get9 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+            }
+            else if (rep3 == "factory worker") {
+                cash3 = cash3 + get10;
+                alert("you recieved" + get10 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+            }
+            else if (rep3 == "entrepreneur") {
+                cash3 = cash3 + get11;
+                alert("you recieved" + get11 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+            }
+
+        }
+
+
+        function payday4() {
+
+
+            var rep4 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay12 = [60, 75, 80];
+            var get12 = pay12[Math.floor(Math.random() * pay12.length)];
+
+            var pay13 = [45, 90];
+            var get13 = pay13[Math.floor(Math.random() * pay13.length)];
+
+            var pay14 = [40, 65, 20];
+            var get14 = pay14[Math.floor(Math.random() * pay14.length)];
+
+            var pay15 = [10, 35, 50, 80, 150];
+            var get15 = pay15[Math.floor(Math.random() * pay15.length)];
+
+
+
+            if (rep4 == "farmer") {
+                cash4 = cash4 + get12;
+                alert("you recieved" + get12 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+
+            }
+            else if (rep4 == "miner") {
+                cash4 = cash4 + get13;
+                alert("you recieved" + get13 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+            }
+            else if (rep4 == "factory worker") {
+                cash4 = cash4 + get14;
+                alert("you recieved" + get14 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 3")
+            }
+            else if (rep4 == "entrepreneur") {
+                cash4 = cash4 + get15;
+                alert("you recieved" + get15 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+            }
+
+        }
+
+
+        function jail() {
+
+            var mang = prompt("you have landed on jail, what player are you")
+            alert("player" + mang + "has to skip 3 turns and pay a fine of $50")
+
+            if (mang == "1") {
+                cash = cash - 50;
+                alert("you have lost $50, player 1 now has" + cash + "dollars")
+            }
+            else if (mang == "2") {
+                cash2 = cash2 - 50;
+                alert("you have lost $50, player 2 now has" + cash2 + "dollars")
+            }
+            else if (mang == "3") {
+                cash3 = cash3 - 50;
+                alert("you have lost $50, player 3 now has" + cash3 + "dollars")
+            }
+            else if (mang == "4") {
+                cash4 = cash4 - 50;
+                alert("you have lost $50, player 4 now has" + cash4 + "dollars")
+            }
+
+        }
+
+        function fired() {
+            alert("you have been fired!!!")
+            alert("whatever player you are you have to skip 1 payday block")
+        }
+
+        function luxury() {
+            alert("you have been taxed and need to pay $200")
+            var num = prompt("what player are you")
+
+            if (num == "1") {
+                cash = cash + 200;
+                alert("you have got $200")
+                alert("player 1 now has  " + cash + " dollars")
+            }
+            else if (num == "2") {
+                cash2 = cash2 + 200;
+                alert("you have got $200")
+                alert("player 2 now has " + cash2 + " dollars")
+            }
+            else if (num == "3") {
+                cash3 = cash3 + 200;
+                alert("you have got $200")
+                alert("player 3 now has " + cash3 + " dollars")
+            }
+            else if (num == "4") {
+                cash4 = cash4 + 200;
+                alert("you have got $200")
+                alert("player 4 now has " + cash4 + " dollars")
+            }
+
+        }
+
+        function dan() {
+            cash = cash + acre;
+            cash2 = cash2 + acre2;
+            cash3 = cash3 + acre3;
+            cash4 = cash4 + acre4;
+
+            if (cash > cash2 && cash3 && cash4) {
+                alert("player 1 is the winner")
+            }
+            else if (cash2 > cash && cash3 && cash4) {
+                alert("player 2 is the winner")
+            }
+            else if (cash3 > cash && cash2 && cash4) {
+                alert("player 3 is the winner")
+            }
+            else if (cash4 > cash2 && cash3 && cash) {
+                alert("player 4 is the winner")
+            }
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="tra">
+
+        <p style="font-size:70px;">Monopoly : Boomer's edition</p>
+        <br>
+        <button type="button" class="button button5" onclick="dice()">click to roll</button>
+        <br>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="on button3" name="set_Value" id="set_Value" value=" player 1's cash"
+                    onclick="setValue()" />
+            </p>
+            <p>
+                <label>
+                    <input type="text" name="bbb" id="bbb" />
+                </label>
+            </p>
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button " class="on button1" name="tea" id="tea" value=" player 2's cash"
+                    onclick="meet()" />
+            </p>
+            <p>
+                <label>
+                    <input type="text" name="aaa" id="aaa" />
+                </label>
+            </p>
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="on button2" name="eat" id="eat" value=" player 3's cash" onclick="yeet()" />
+            </p>
+            <p>
+                <label>
+                    <input type="text" name="ccc" id="ccc" />
+                </label>
+            </p>
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="on button55" name="me" id="me" value=" 4's cash" onclick="met()" />
+                <p>
+                    <label>
+                        <input type="text" name="ddd" id="ddd" />
+                    </label>
+                </p>
+            </p>
+        </form>
+        <br>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="doo" style="vertical-align:middle" name=id="land" value=" player 1's land"
+                    onclick="lan()" />
+                <p>
+                    <label>
+                        <input type="text" name="ggg" id="ggg" />
+                    </label>
+                </p>
+            </p>
+
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="doo" style="vertical-align:middle" name="lan2" id="lan2"
+                    value="player 2's land" onclick="lan22()" />
+                <p>
+                    <label>
+                        <input type="text" name="sss" id="sss" />
+                    </label>
+                </p>
+            </p>
+
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="doo" style="vertical-align:middle" name="dan" id="dan"
+                    value="player 3's land" onclick="nan()" />
+                <p>
+                    <label>
+                        <input type="text" name="zzz" id="zzz" />
+                    </label>
+                </p>
+            </p>
+
+        </form>
+        <form id="form1" name="form1" method="post">
+            <p>
+                <input type="button" class="doo" style="vertical-align:middle" name="can" id="can"
+                    value="player 4's land" onclick="nic()" />
+                <p>
+                    <label>
+                        <input type="text" name="hhh" id="hhh" />
+                    </label>
+                </p>
+            </p>
+
+        </form>
+        <br>
+        <h2 style="color:silver;">land blocks</h2>
+        <br>
+        <script>
+
+            function jobs() {
+                var job = prompt("player 1's job is : farmer, miner, factory worker or entrepreneur")
+
+                document.write("player 1's job :" + job)
+
+            }
+            jobs()
+
+        </script>
+        <br>
+        <script>
+            function payd() {
+                var job2 = prompt("player 2's job is : farmer, miner, factory worker or entrepreneur")
+
+                document.write("player 2's job :" + job2)
+            }
+            payd()
+        </script>
+        <br>
+        <script>
+            function rad() {
+                var job3 = prompt("player 3's job is : farmer, miner, factory worker or entrepreneur")
+
+                document.write("player 3's job :" + job3)
+            }
+            rad()
+        </script>
+        <br>
+        <script>
+            function lad() {
+                var job4 = prompt("player 4's job is : farmer, miner, factory worker or entrepreneur")
+
+                document.write("player 4's job :" + job4)
+            }
+            lad()
+        </script>
+        <br>
+        <ol>
+            <li> farmer = [$60, $75, $80]</li>
+            <li> Miner = [$45, $90]</li>
+            <li> Factory worker = [$40, $65, $20]</li>
+            <li> Entrepreneur= [$10, -$40, $50, $80, $150]</li>
+        </ol>
+
+        <br>
+        <button type="button" class="lan" onclick="field()">field for player 1</button> <button type="button"
+            class="lan" onclick="field2()">field
+            for player 2</button> <button type="button" class="lan" onclick="field3()">field for player 3</button>
+        <button type="button" class="lan" onclick="field4()">field for player 4</button>
+        <br>
+        <button type="button" class="an" onclick="prairie()">prairie for player 1</button> <button type="button"
+            class="an" onclick="prairie2()">prairie for player 2</button> <button type="button" class="an"
+            onclick="prairie3()">prairie
+            for player
+            3</button> <button type="button" class="an" onclick="prairie4()">prairie for player 4</button>
+        <br>
+        <button type="button" class="n" onclick="lake()">lake for player 1</button> <button type="button" class="n"
+            onclick="lake2()">lake for
+            player 2</button> <button type="button" class="n" onclick="lake3()">lake for player 3</button> <button
+            type="button" class="n" onclick="lake4()">lake for player 4</button>
+        <br>
+        <button type="button" class="a" onclick="park()">park for player 1</button> <button type="button" class="a"
+            onclick="park2()">park for
+            player 2</button> <button type="button" class="a" onclick="park3()">park for player 3</button> <button
+            type="button" class="a" onclick="park4()">park for player 4</button>
+        <br>
+        <ul>
+
+            <li>field(pay $300)(get 3acres)</li>
+            <li>prairie(pay $400)(get 4acres)</li>
+            <li>lake(pay $600)(get 6acres)</li>
+            <li>park(pay $200)(get 2acres)</li>
+        </ul>
+        <br>
+        <h2 style="color:green;">payday</h2>
+
+        <br>
+        <button type="button" class="rip" onclick="payday()">payday for player 1</button> <button type="button"
+            class="rip" onclick="payday2()">payday for player 2</button> <button type="button" class="rip"
+            onclick="payday3()">payday
+            for player
+            3</button> <button type="button" class="rip" onclick="payday4()">payday for player 4</button>
+        <br>
+        <h3 style="color:navy;">tax</h3>
+        <button type="button" class="butt butt2" onclick="tax()">click here if you landed on the tax block</button>
+        <br>
+        <h3 style="color:brown;">railroad</h3>
+        <button type="button" class="bu bu1" onclick="railroad()">click here if you landed on railroad</button>
+
+        <br>
+        <h3 style="color:rgb(151, 67, 8);">jail</h3>
+        <button type="button" class="press" onclick="jail()">click here if you landed on jail</button>
+
+        <h3 style="color:red;">fired</h3>
+        <button type="button" class="pp pp1" onclick="fired()">click here if you are fired</button>
+
+        <h3 style="color:seashell;">luxury tax</h3>
+        <button type="button" class="d" onclick="luxury()">click here to pay luxury tax</button>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <img src="https://scrip.pharmaintelligence.informa.com/-/media/editorial/scrip/2019/07/sc1907_the-end_1422417179_1200.jpg"
+                alt="Snow" style="width:100%">
+            <button type="button" class="btn" onclick="dan()">end game</button>
+        </div>
+
+</body>
+
+</html>

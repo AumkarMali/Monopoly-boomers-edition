@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="monopoly stylesheet.css" />
+  
+    <script>
+
+        var cash = 50;
+        var cash2 = 50;
+        var cash3 = 50;
+        var cash4 = 50;
+        var acre = 5;
+        var acre2 = 5;
+        var acre3 = 5;
+        var acre4 = 5;
+        var clicks = 0;
+
+        function dice() {
+
+            var arr = [1, 2, 3, 4, 5, 6]
+            var roll = arr[Math.floor(Math.random() * arr.length)]
+
+            if (roll > 0) {
+                alert(roll + "is your dice roll")
+                clicks += 1;
+            }
+
+            if (clicks < 5) {
+                console.log("its player " + clicks + "'s" + " turn")
+            }
+            else if (clicks >= 5) {
+                clicks = 1
+                console.log("its player " + clicks + "'s" + " turn")
+            }
+        }
+
+
+
+        function field2() {
+
+            if (cash2 >= 300) {
+                cash2 = cash2 - 300;
+                acre2 = acre2 + 3;
+
+                document.getElementById('bbb').value = cash2;
+                document.getElementById('sss').value = acre2;
+            }
+
+            else if (cash2 <= 300) {
+                alert("player 2 does not have enough money to purchase a field")
+            }
+        }
+
+        function field() {
+
+            if (cash >= 300) {
+                cash = cash - 300;
+                acre = acre + 3;
+
+                document.getElementById('aaa').value = cash;
+                document.getElementById('ggg').value = acre;
+            }
+
+            else if (cash <= 300) {
+                alert("player 1 does not have enough money to purchase a field")
+            }
+
+        }
+
+
+        function field3() {
+
+
+            if (cash3 >= 300) {
+                cash3 = cash3 - 300;
+                acre3 = acre3 + 3;
+
+                document.getElementById('ccc').value = cash3;
+                document.getElementById('zzz').value = acre3;
+            }
+
+            else if (cash3 <= 300) {
+                alert("player 3 does not have enough money to purchase a field")
+            }
+
+        }
+
+        function field4() {
+
+            if (cash4 >= 300) {
+                cash4 = cash4 - 300;
+                acre4 = acre4 + 3;
+
+                document.getElementById('ddd').value = cash4;
+                document.getElementById('hhh').value = acre4;
+            }
+
+            else if (cash4 <= 300) {
+                alert("player 4 does not have enough money to purchase a field")
+            }
+
+        }
+
+
+        function prairie() {
+
+
+            if (cash >= 400) {
+                cash = cash - 400;
+                acre = acre + 4;
+
+                document.getElementById('aaa').value = cash;
+                document.getElementById('ggg').value = acre;
+            }
+
+            else if (cash <= 300) {
+                alert("player 1 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie2() {
+
+
+            if (cash2 >= 400) {
+                cash2 = cash2 - 400;
+                acre2 = acre2 + 4;
+
+                document.getElementById('bbb').value = cash2;
+                document.getElementById('sss').value = acre2;
+            }
+
+            else if (cash2 <= 300) {
+                alert("player 2 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie3() {
+
+
+            if (cash3 >= 400) {
+                cash3 = cash3 - 400;
+                acre3 = acre3 + 4;
+
+                document.getElementById('ccc').value = cash3;
+                document.getElementById('zzz').value = acre3;
+            }
+
+            else if (cash3 <= 300) {
+                alert("player 3 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function prairie4() {
+
+
+            if (cash4 >= 400) {
+                cash4 = cash4 - 400;
+                acre4 = acre4 + 4;
+
+                document.getElementById('ddd').value = cash4;
+                document.getElementById('hhh').value = acre4;
+            }
+
+            else if (cash4 <= 300) {
+                alert("player 4 does not have enough money to purchase a prairie")
+            }
+
+        }
+
+        function lake() {
+
+
+            if (cash >= 600) {
+                cash = cash - 600;
+                acre = acre + 6;
+
+                document.getElementById('aaa').value = cash;
+                document.getElementById('ggg').value = acre;
+            }
+
+            else if (cash <= 600) {
+                alert("player 1 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake2() {
+
+
+            if (cash2 >= 600) {
+                cash2 = cash2 - 600;
+                acre2 = acre2 + 6;
+
+                document.getElementById('bbb').value = cash2;
+                document.getElementById('sss').value = acre2;
+            }
+
+            else if (cash2 <= 600) {
+                alert("player 2 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake3() {
+
+            if (cash3 >= 600) {
+                cash3 = cash3 - 600;
+                acre3 = acre3 + 6;
+
+                document.getElementById('ccc').value = cash3;
+                document.getElementById('zzz').value = acre3;
+            }
+
+            else if (cash3 <= 600) {
+                alert("player 3 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function lake4() {
+
+
+            if (cash4 >= 600) {
+                cash4 = cash4 - 600;
+                acre4 = acre4 + 6;
+
+                document.getElementById('ddd').value = cash4;
+                document.getElementById('hhh').value = acre4;
+            }
+
+            else if (cash4 <= 600) {
+                alert("player 4 does not have enough money to purchase a lake")
+            }
+
+        }
+
+        function park() {
+
+            if (cash >= 200) {
+                cash = cash - 200;
+                acre = acre + 2;
+
+                document.getElementById('aaa').value = cash;
+                document.getElementById('ggg').value = acre;
+            }
+
+            else if (cash <= 200) {
+                alert("player 1 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function park2() {
+
+
+            if (cash2 >= 200) {
+                cash2 = cash2 - 200;
+                acre2 = acre2 + 2;
+
+                document.getElementById('bbb').value = cash2;
+                document.getElementById('sss').value = acre2;
+            }
+
+            else if (cash2 <= 200) {
+                alert("player 2 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function park3() {
+
+
+            if (cash3 >= 200) {
+                cash3 = cash3 - 200;
+                acre3 = acre3 + 2;
+
+                document.getElementById('ccc').value = cash3;
+                document.getElementById('zzz').value = acre3;
+            }
+
+            else if (cash3 <= 200) {
+                alert("player 3 does not have enough money to purchase a park")
+            }
+
+        }
+
+
+        function park4() {
+
+            if (cash4 >= 200) {
+                cash4 = cash4 - 200;
+                acre4 = acre4 + 2;
+
+                document.getElementById('ddd').value = cash4;
+                document.getElementById('hhh').value = acre4;
+            }
+
+            else if (cash4 <= 200) {
+                alert("player 4 does not have enough money to purchase a park")
+            }
+
+        }
+
+        function tax() {
+            var van = prompt("what player are you")
+
+            if (van == "1") {
+                cash = cash - cash * 0.2;
+                alert("player 1's net worth :" + cash)
+            }
+            else if (van == "2") {
+                cash2 = cash2 - cash2 * 0.2;
+                alert("player 2's net worth :" + cash2)
+            }
+            else if (van == "3") {
+                cash3 = cash3 - cash3 * 0.2;
+                alert("player 3's net worth :" + cash3)
+            }
+            else if (van == "4") {
+                cash4 = cash4 - cash4 * 0.2;
+                alert("player 4's net worth :" + cash4)
+            }
+        }
+
+        function railroad() {
+            var sk = prompt("do you want to invest in the transcontinental railroad")
+            var joji = prompt("what player are you")
+
+            if (sk == "yes" && joji == "1") {
+                acre = acre + acre * 0.4;
+                alert("player 1 has this much land :" + acre)
+            }
+            else if (joji == "2") {
+                acre2 = acre2 + acre2 * 0.4;
+                alert("player 2 has this much land :" + acre2)
+            }
+            else if (joji == "3") {
+                acre3 = acre3 + acre3 * 0.4;
+                alert("player 3 has this much land :" + acre3)
+            }
+            else if (joji == "4") {
+                acre4 = acre4 + acre4 * 0.4;
+                alert("player 4 has this much land :" + acre4)
+            }
+        }
+
+
+
+        function payday() {
+
+
+            var rep = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay = [60, 75, 80];
+            var get = pay[Math.floor(Math.random() * pay.length)];
+
+            var pay1 = [45, 90];
+            var get1 = pay1[Math.floor(Math.random() * pay1.length)];
+
+            var pay2 = [40, 65, 20];
+            var get2 = pay2[Math.floor(Math.random() * pay2.length)];
+
+            var pay3 = [10, 35, 50, 80, 150];
+            var get3 = pay3[Math.floor(Math.random() * pay3.length)];
+
+
+
+
+
+            if (rep == "farmer") {
+                cash = cash + get;
+                alert("you recieved" + get + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+                document.getElementById('aaa').value = cash;
+
+            }
+            else if (rep == "miner") {
+                cash = cash + get1;
+                alert("you recieved" + get1 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+                document.getElementById('aaa').value = cash;
+            }
+            else if (rep == "factory worker") {
+                cash = cash + get2;
+                alert("you recieved" + get2 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+                document.getElementById('aaa').value = cash;
+            }
+            else if (rep == "entrepreneur") {
+                cash = cash + get3;
+                alert("you recieved" + get3 + "dollars player 1")
+                alert("you have " + cash + "dollars player 1")
+                document.getElementById('aaa').value = cash;
+            }
+
+        }
+
+
+        function payday2() {
+
+
+            var rep2 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay4 = [60, 75, 80];
+            var get4 = pay4[Math.floor(Math.random() * pay4.length)];
+
+            var pay5 = [45, 90];
+            var get5 = pay5[Math.floor(Math.random() * pay5.length)];
+
+            var pay6 = [40, 65, 20];
+            var get6 = pay6[Math.floor(Math.random() * pay6.length)];
+
+            var pay7 = [10, 35, 50, 80, 150];
+            var get7 = pay7[Math.floor(Math.random() * pay7.length)];
+
+
+
+
+
+            if (rep2 == "farmer") {
+                cash2 = cash2 + get4;
+                alert("you recieved" + get4 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+                document.getElementById('bbb').value = cash2;
+
+            }
+            else if (rep2 == "miner") {
+                cash2 = cash2 + get5;
+                alert("you recieved" + get5 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+                document.getElementById('bbb').value = cash2;
+            }
+            else if (rep2 == "factory worker") {
+                cash2 = cash2 + get6;
+                alert("you recieved" + get6 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+                document.getElementById('bbb').value = cash2;
+            }
+            else if (rep2 == "entrepreneur") {
+                cash2 = cash2 + get7;
+                alert("you recieved" + get7 + "dollars player 2")
+                alert("you have " + cash2 + "dollars player 2")
+                document.getElementById('bbb').value = cash2;
+            }
+
+        }
+
+
+        function payday3() {
+
+
+            var rep3 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay8 = [60, 75, 80];
+            var get8 = pay8[Math.floor(Math.random() * pay8.length)];
+
+            var pay9 = [45, 90];
+            var get9 = pay9[Math.floor(Math.random() * pay9.length)];
+
+            var pay10 = [40, 65, 20];
+            var get10 = pay10[Math.floor(Math.random() * pay10.length)];
+
+            var pay11 = [10, 35, 50, 80, 150];
+            var get11 = pay11[Math.floor(Math.random() * pay11.length)];
+
+
+
+
+
+            if (rep3 == "farmer") {
+                cash3 = cash3 + get8;
+                alert("you recieved" + get8 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+                document.getElementById('ccc').value = cash3;
+
+            }
+            else if (rep3 == "miner") {
+                cash3 = cash3 + get9;
+                alert("you recieved" + get9 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+                document.getElementById('ccc').value = cash3;
+            }
+            else if (rep3 == "factory worker") {
+                cash3 = cash3 + get10;
+                alert("you recieved" + get10 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+                document.getElementById('ccc').value = cash3;
+            }
+            else if (rep3 == "entrepreneur") {
+                cash3 = cash3 + get11;
+                alert("you recieved" + get11 + "dollars player 3")
+                alert("you have " + cash3 + "dollars player 3")
+                document.getElementById('ccc').value = cash3;
+            }
+
+        }
+
+
+        function payday4() {
+
+
+            var rep4 = prompt("what job do you currently have : farmer, miner, factory worker, entrepreneur");
+
+            var pay12 = [60, 75, 80];
+            var get12 = pay12[Math.floor(Math.random() * pay12.length)];
+
+            var pay13 = [45, 90];
+            var get13 = pay13[Math.floor(Math.random() * pay13.length)];
+
+            var pay14 = [40, 65, 20];
+            var get14 = pay14[Math.floor(Math.random() * pay14.length)];
+
+            var pay15 = [10, 35, 50, 80, 150];
+            var get15 = pay15[Math.floor(Math.random() * pay15.length)];
+
+
+
+            if (rep4 == "farmer") {
+                cash4 = cash4 + get12;
+                alert("you recieved" + get12 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+                document.getElementById('ddd').value = cash4;
+
+            }
+            else if (rep4 == "miner") {
+                cash4 = cash4 + get13;
+                alert("you recieved" + get13 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+                document.getElementById('ddd').value = cash4;
+            }
+            else if (rep4 == "factory worker") {
+                cash4 = cash4 + get14;
+                alert("you recieved" + get14 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 3")
+                document.getElementById('ddd').value = cash4;
+            }
+            else if (rep4 == "entrepreneur") {
+                cash4 = cash4 + get15;
+                alert("you recieved" + get15 + "dollars player 4")
+                alert("you have " + cash4 + "dollars player 4")
+                document.getElementById('ddd').value = cash4;
+            }
+
+        }
+
+
+        function jail() {
+
+            var mang = prompt("you have landed on jail, what player are you")
+            alert("player" + mang + "has to skip 3 turns and pay a fine of $50")
+
+            if (mang == "1") {
+                cash = cash - 50;
+                alert("you have lost $50, player 1 now has" + cash + "dollars")
+            }
+            else if (mang == "2") {
+                cash2 = cash2 - 50;
+                alert("you have lost $50, player 2 now has" + cash2 + "dollars")
+            }
+            else if (mang == "3") {
+                cash3 = cash3 - 50;
+                alert("you have lost $50, player 3 now has" + cash3 + "dollars")
+            }
+            else if (mang == "4") {
+                cash4 = cash4 - 50;
+                alert("you have lost $50, player 4 now has" + cash4 + "dollars")
+            }
+
+        }
+
+        function fired() {
+            alert("you have been fired!!!")
+            alert("whatever player you are you have to skip 1 payday block")
+        }
+
+        function luxury() {
+            alert("you have been taxed and need to pay $200")
+            var num = prompt("what player are you")
+
+            if (num == "1") {
+                cash = cash + 200;
+                alert("you have got $200")
+                alert("player 1 now has  " + cash + " dollars")
+            }
+            else if (num == "2") {
+                cash2 = cash2 + 200;
+                alert("you have got $200")
+                alert("player 2 now has " + cash2 + " dollars")
+            }
+            else if (num == "3") {
+                cash3 = cash3 + 200;
+                alert("you have got $200")
+                alert("player 3 now has " + cash3 + " dollars")
+            }
+            else if (num == "4") {
+                cash4 = cash4 + 200;
+                alert("you have got $200")
+                alert("player 4 now has " + cash4 + " dollars")
+            }
+
+        }
+
+        function dan() {
+            cash = cash + acre;
+            cash2 = cash2 + acre2;
+            cash3 = cash3 + acre3;
+            cash4 = cash4 + acre4;
+
+            if (cash > cash2 && cash3 && cash4) {
+                alert("player 1 is the winner")
+            }
+            else if (cash2 > cash && cash3 && cash4) {
+                alert("player 2 is the winner")
+            }
+            else if (cash3 > cash && cash2 && cash4) {
+                alert("player 3 is the winner")
+            }
+            else if (cash4 > cash2 && cash3 && cash) {
+                alert("player 4 is the winner")
+            }
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Monopoly: Boomer's edition</h1>
+        <p>Made by Aumkar Mali</p>
+    </div>
+
+    <br>
+    <button type="button" class="button button5" onclick="dice()">click to roll</button>
+    <br>
+    <hr class = "black_line">
+    <img src="dot.jpg" class="game" height="20" width="20">
+
+    <br>
+    <h3 style="color:green;">player 1's cash</h3>
+    <input type="text" name="aaa" id="aaa" value="0"></input>
+    <br>
+    <h3 style="color:green;">player 2's cash</h3>
+    <input type="text" name="bbb" id="bbb" value="0"></input>
+    <br>
+    <h3 style="color:green;">player 3's cash</h3>
+    <input type="text" name="ccc" id="ccc" value="0"></input>
+    <br>
+    <h3 style="color:green;">player 4's cash</h3>
+    <input type="text" name="ddd" id="ddd" value="0"></input>
+
+    <br>
+    <br>
+
+    <h3 style="color:rgb(204, 21, 21);">player 1's land</h3>
+    <input type="text" name="ggg" id="ggg" value="5"></input>
+    <br>
+    <h3 style="color:rgb(204, 21, 21);">player 2's land</h3>
+    <input type="text" name="sss" id="sss" value="5"></input>
+    <br>
+    <h3 style="color:rgb(204, 21, 21);">player 3's land</h3>
+    <input type="text" name="zzz" id="zzz" value="5"></input>
+    <br>
+    <h3 style="color:rgb(204, 21, 21);">player 4's land</h3>
+    <input type="text" name="hhh" id="hhh" value="5"></input>
+
+    <br>
+    <audio id="myAudio">
+        <source src="jazz.ogg" type="audio/ogg">
+        <source src="jazz.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+    <button onclick="playAudio()" type="button" class="play">ya like jazz???</button>
+    <button onclick="pauseAudio()" type="button" class="play play2">stop de jazz!!</button>
+
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        } 
+    </script>
+    <br>
+
+    <h2 style="color:silver;">land blocks</h2>
+    <br>
+    <ol>
+        <li> farmer = [$60, $75, $80]</li>
+        <li> Miner = [$45, $90]</li>
+        <li> Factory worker = [$40, $65, $20]</li>
+        <li> Entrepreneur= [$10, -$40, $50, $80, $150]</li>
+    </ol>
+
+    <br>
+    <button type="button" class="lan" onclick="field()">field for player 1</button>
+    <button type="button" class="lan" onclick="field2()">field for player 2</button>
+    <button type="button" class="lan" onclick="field3()">field for player 3</button>
+    <button type="button" class="lan" onclick="field4()">field for player 4</button>
+    <br>
+    <button type="button" class="an" onclick="prairie()">prairie for player 1</button>
+    <button type="button" class="an" onclick="prairie2()">prairie for player 2</button>
+    <button type="button" class="an" onclick="prairie3()">prairie for player 3</button>
+    <button type="button" class="an" onclick="prairie4()">prairie for player 4</button>
+    <br>
+    <button type="button" class="n" onclick="lake()">lake for player 1</button>
+    <button type="button" class="n" onclick="lake2()">lake for player 2</button>
+    <button type="button" class="n" onclick="lake3()">lake for player 3</button>
+    <button type="button" class="n" onclick="lake4()">lake for player 4</button>
+    <br>
+    <button type="button" class="a" onclick="park()">park for player 1</button>
+    <button type="button" class="a" onclick="park2()">park for player 2</button>
+    <button type="button" class="a" onclick="park3()">park for player 3</button>
+    <button type="button" class="a" onclick="park4()">park for player 4</button>
+    <br>
+
+    <ul>
+        <li>field(pay $300)(get 3acres)</li>
+        <li>prairie(pay $400)(get 4acres)</li>
+        <li>lake(pay $600)(get 6acres)</li>
+        <li>park(pay $200)(get 2acres)</li>
+    </ul>
+
+    <br>
+    <h2 style="color:green;">payday</h2>
+    <br>
+    <img src="mono2.jpg" alt="monopoly guy" style="float:right;width:420px;height:600px;">
+
+    <br>
+    <button type="button" class="rip" onclick="payday()">payday for player 1</button> <button type="button" class="rip"
+        onclick="payday2()">payday for player 2</button> <button type="button" class="rip" onclick="payday3()">payday
+        for player
+        3</button> <button type="button" class="rip" onclick="payday4()">payday for player 4</button>
+    <br>
+    <h3 style="color:gold;">chest</h3>
+    <button type="button" class="press" onclick="chest()">click here if you landed on chest</button>
+    <br>
+    <h3 style="color:navy;">tax</h3>
+    <button type="button" class="butt butt2" onclick="tax()">click here if you landed on the tax block</button>
+    <br>
+    <h3 style="color:brown;">railroad</h3>
+    <button type="button" class="bu bu1" onclick="railroad()">click here if you landed on railroad</button>
+
+    <br>
+    <h3 style="color:rgb(151, 67, 8);">jail</h3>
+
+    <button type="button" class="ton ton1" onclick="jail()">click here if you landed on jail</button>
+
+    <h3 style="color:red;">fired</h3>
+    <button type="button" class="pp pp1" onclick="fired()">click here if you are fired</button>
+
+    <h3 style="color:seashell;">luxury tax</h3>
+    <button type="button" class="d" onclick="luxury()">click here to pay luxury tax</button>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <img src="end.jpg" alt="Snow" style="width:100%">
+        <button type="button" class="btn" onclick="dan()">end game</button>
+    </div>
+
+</body>
+
+</html>
